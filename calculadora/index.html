@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='https://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <div class="wrapper">
+       <row class="fist-row">
+            <input class="screen" size="140" type="text" placeholder="Press a key to calculate" value="">
+       </row><br>
+        <div class="keys">
+        <row class ="fifth-row">
+             <div class="key" value="CE" kind="remove">CE</div>
+             <div class="key remove-all" value="C" kind="remove-all">C</div>
+             <div class="key" value="." kind="operator">.</div>
+             <div class="key" value="/" kind="operator">/</div>
+        </row><br>
+       <row class="second-row">
+           <div class="key" value="1" kind="number">1</div>
+           <div class="key" value="2" kind="number">2</div>
+           <div class="key" value="3" kind="number">3</div>
+           <div class="key" value="+" kind="operator">+</div>
+       </row><br>
+        <row class="third-row">
+            <div class="key" value="4" kind="number">4</div>
+            <div class="key" value="5" kind="number">5</div>
+            <div class="key" value="6" kind="number">6</div>
+            <div class="key" value="-" kind="operator">-</div>
+        </row><br>
+        <row class="four-row">
+            <div class="key" value="7" kind="number">7</div>
+            <div class="key" value="8" kind="number">8</div>
+            <div class="key" value="9" kind="number">9</div>
+            <div class="key" value="*" kind="operator">*</div>
+        </row><br>
+        <row class="six-row">
+            <div class="key zero" value="0" kind="number">0</div>
+            <div class="key equal" value="=" kind="equal">=</div>
+        </row>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
