@@ -6,7 +6,7 @@
 
 
 (function () {
-  $(document).ready(function () {
+    $(document).ready(function () {
         function Keypress(value, kind) {
             this.value = value;
             this.kind = kind;
@@ -19,7 +19,7 @@
             event.preventDefault();
             var value = $(this).attr('value');
             var i = display.length;
-            var keytouch = new Keypress(value, $(this).attr('kind'))
+            var keytouch = new Keypress(value, $(this).attr('kind'));
             display.push(keytouch);
             var screenpost;
 
@@ -41,6 +41,7 @@
                         }
                     }
                 }
+
                     var keyNumber = number();
 
                     if (keyNumber !== undefined) {
@@ -116,7 +117,7 @@
                     break;
 
                 case 'CE' :
-                    ;
+
                 function deleteelement() {
                     /*if (display.length === 0 && screenview.length === 0){
                      return screenview;
@@ -153,7 +154,7 @@
                     screenpost = screenview.join('');
                     if (display[i - 1].kind === 'number') {
                         var result = eval(screenpost);
-                        if (result === Infinity || result === NaN) {
+                        if (result === Infinity || isNaN(result)) {
                             return 'ERROR';
                         } else if (typeof result === 'number') {
                             return result;
