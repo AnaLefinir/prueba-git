@@ -6,6 +6,7 @@ var jshint = require('gulp-jshint');
 var compass = require('gulp-compass');
 var cleanCSS = require('gulp-clean-css');
 var clean = require('gulp-clean');
+var concat = require('gulp-concat');
 
 gulp.task('default', ['lint', 'compass'], function () {
     console.log('chuchi es lo mas lindo del universo!!! <3');
@@ -14,6 +15,12 @@ gulp.task('default', ['lint', 'compass'], function () {
 gulp.task('clean', function () {
     return gulp.src('dist', {read: false})
         .pipe(clean());
+});
+
+gulp.task('concat-css', function() {
+    return gulp.src('app/*.css')
+        .pipe(concat('*.js'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('lint', ['clean'], function () {
